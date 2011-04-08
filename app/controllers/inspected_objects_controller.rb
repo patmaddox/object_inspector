@@ -1,5 +1,5 @@
 class InspectedObjectsController < ApplicationController
-  include ObjectInspectorHelper
+  include ::ObjectInspectorHelper
   respond_to :html, :json
   layout nil
 

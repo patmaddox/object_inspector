@@ -25,7 +25,7 @@ function toggleHalos () {
 function openInspector(id) {
   console.debug('inspecting ' + id);
   window.open('http://localhost:3000/inspected_objects/' + id, 'inspector_' + id,
-             'width=650,height=450');
+             'width=650,height=600');
 }
 
 jQuery(function() {
@@ -42,12 +42,12 @@ jQuery(function() {
       var form = jQuery(this);
       var data = eval(data.responseText);
     });
-});
 
-// TODO: make these use livequery
-jQuery('#oi-devbar .oi-halos').click(toggleHalos);
+  // TODO: make these use livequery
+  jQuery('#oi-devbar .oi-halos').click(toggleHalos);
 
-jQuery('.oi-halo-inspector a').click(function(event) {
-  openInspector(jQuery(this).parents('.oi-halo').parents('.inspect').attr('id'));
-  event.stopImmediatePropagation();
+  jQuery('.oi-halo-inspector a').click(function(event) {
+    openInspector(jQuery(this).parents('.oi-halo').parents('.inspect').attr('id'));
+    event.stopImmediatePropagation();
+  });
 });

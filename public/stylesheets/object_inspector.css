@@ -22,7 +22,7 @@ body#oi-inspector-body dl lh {
   font-size: 1.4em;
 }
 
-body#oi-inspector-body #oi-devbar {
+#oi-devbar {
   left: 0;
   right: 0;
   bottom: 0;
@@ -37,7 +37,7 @@ body#oi-inspector-body #oi-devbar {
   font-size: 14px;
 }
 
-body#oi-inspector-body .oi-button, body#oi-inspector-body .oi-halo-title {
+.oi-button, .oi-halo-title {
   float: left;
   margin-right: 15px;
 }
