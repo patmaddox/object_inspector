@@ -1,0 +1,43 @@
+body#oi-inspector-body {
+  max-width: 700px;
+  min-width: 400px;
+}
+
+body#oi-inspector-body .content_wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+}
+
+body#oi-inspector-body dt {
+  float: left;
+  margin-right: 15px;
+  width: 180px;
+  font-weight: bold;
+}
+
+body#oi-inspector-body dl lh {
+  clear: both; 
+  display: block;
+  font-size: 1.4em;
+}
+
+body#oi-inspector-body #oi-devbar {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  padding: 2px;
+  position: fixed;
+  text-align: left;
+  background-color: #EEE;
+  border-top: 1px solid #AAA;
+  min-height: 20px;
+  color: #444;
+  font-size: 14px;
+}
+
+body#oi-inspector-body .oi-button, body#oi-inspector-body .oi-halo-title {
+  float: left;
+  margin-right: 15px;
+}

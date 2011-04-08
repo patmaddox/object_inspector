@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <%= csrf_meta_tag %>
+  <title>Object Inspector on <%= @object.class %>_<%= @object.id %></title>
+  <%= stylesheet_link_tag 'object_inspector' %>
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'rails', 'application', 'object_inspector' %>
+</head>
+<body id='oi-inspector-body'>
+
+<script type='text/javascript'>
+  var object_attributes = <%= raw @object.to_json(:methods => :class_name) %>;
+</script>
+
+
+<div class='content_wrapper'>
+<div id='oi-inspector'>
+  <dl>
+    <lh><%= @object.class_name %>_<%= @object.id %></lh>
+    <% @object.attributes.each do |name, value| %>
+      <dt><%= name %></dt>
+      <dd><%= value %></dd>
+    <% end %>
+  </dl>
+
+<div class='oi-interactive'>
+  <%= form_tag(object_inspector_processes_path, :remote => true) do %>
+    <%= hidden_field_tag :object_id, dom_id(@object) %>
+    <%= text_field_tag :command %>
+    <%= submit_tag "Eval" %>
+  <% end %>
+
+  <textarea rows=25 cols=40></textarea>
+</div>
+  
+</div>
+</div>
+</body>
+</html>

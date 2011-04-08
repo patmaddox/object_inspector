@@ -15,10 +15,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "object_inspector"
   gem.homepage = "http://github.com/patmaddox/object_inspector"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A simple object inspector}
+  gem.description = %Q{View and interact with objects in your Rails app}
   gem.email = "patmaddox@me.com"
   gem.authors = ["Pat Maddox"]
+  gem.version = '0.0.1'
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
