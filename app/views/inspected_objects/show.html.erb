@@ -30,7 +30,7 @@
   <%= form_tag(object_inspector_processes_path, :remote => true) do %>
     <%= hidden_field_tag :object_id, dom_id(@object) %>
     <%= text_field_tag :command %>
-    <%= submit_tag "Eval" %>
+    <%= submit_tag "Eval" %> (try <i>self.inspect</i> !)
   <% end %>
 
   <textarea rows=25 cols=40></textarea>
