@@ -22,6 +22,8 @@ body#oi-inspector-body dl lh {
   font-size: 1.4em;
 }
 
+#oi-templates { display: none; }
+
 #oi-devbar {
   left: 0;
   right: 0;

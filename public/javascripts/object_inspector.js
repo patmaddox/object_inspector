@@ -43,10 +43,9 @@ jQuery(function() {
       var data = eval(data.responseText);
     });
 
-  // TODO: make these use livequery
   jQuery('#oi-devbar .oi-halos').click(toggleHalos);
 
-  jQuery('.oi-halo-inspector a').click(function(event) {
+  jQuery('.oi-halo-inspector a').live('click', function(event) {
     openInspector(jQuery(this).parents('.oi-halo').parents('.inspect').attr('id'));
     event.stopImmediatePropagation();
   });
