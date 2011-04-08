@@ -24,7 +24,7 @@ Also, there is not a single test :)
 Steps to actually get this thing going:
 
 1. Add object_inspector to your Gemfile
-  gem 'object_inspector', :git => 'git@github.com:patmaddox/object_inspector.git'
+  gem 'object_inspector', :git => 'git://github.com/patmaddox/object_inspector.git'
 
 2. Add the object_inspector stylesheets and javascript to your app
   <%= stylesheet_link_tag 'object_inspector' %>
