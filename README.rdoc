@@ -1,6 +1,24 @@
 = object_inspector
 
-Description goes here.
+This is a Rails engine which adds a little devbar at the bottom of your screen. If you click the "Halos" link, it enables halos for all dom elements that have the 'inspect' CSS class applied to them. These should also have their id attribute set to some dom_id call. For example, a blog post might look like this:
+
+<div class='blog_post inspect' id='<%= dom_id(@blog_post)'>
+  ...
+</div>
+
+When you enable halos, you will see a new "Inspect" link above each relevant dom element. Click on that to open a basic object inspector, where you can view the attributes and interact with it.
+
+IMPORTANT NOTES
+
+I whipped this up in an afternoon. It's not in great shape for the community yet. In particular:
+
+* it is rude about configuration - it could break existing JSON stuff you have
+* it assumes ActiveRecord is being used
+* there's probably other stuff
+
+If any of those things piss you off, your options are to fork it and send a pull request, or wait for me to improve on it.
+
+Also, there is not a single test :)
 
 == Contributing to object_inspector
  
