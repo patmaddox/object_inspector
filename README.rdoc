@@ -15,6 +15,7 @@ I whipped this up in an afternoon. It's not in great shape for the community yet
 * it is rude about configuration - it could break existing JSON stuff you have
 * it assumes ActiveRecord is being used
 * it relies on jQuery
+* hard-coded to port 3000 (yes, really)
 * there's probably other stuff
 
 If any of those things piss you off, your options are to fork it and send a pull request, or wait for me to improve on it.
